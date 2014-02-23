@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Jackson.Home.Models;
+
+namespace BootstrapMvcSample.Controllers
+{
+    public class HomeController : BootstrapBaseController
+    {
+
+        public ActionResult Index()
+        {
+            var datacontext = new SiteDataDataContext();
+            HomePageViewModel model = new HomePageViewModel();
+            model.MostRecentBlogPost = datacontext.BlogPosts.OrderByDescending(post => post.Date).First();
+            return View(model);
+        }
+    }
+}

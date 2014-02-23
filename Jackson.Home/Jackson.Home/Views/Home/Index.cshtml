@@ -1,0 +1,63 @@
+﻿@model Jackson.Home.Models.HomePageViewModel
+
+@{
+    ViewBag.Title = "John (Jackson) Joseph Hayes Jr.";
+    Layout = "~/Views/shared/_BootstrapLayout.narrow.cshtml";
+}
+
+
+<div id="headrow" class="row homeHeaderRow">
+    <div class="span8 offset3">
+        <h1>Welcome</h1>
+        <p class="lead">I am Jackson Hayes. This is a website about me. I think your gonna like it. </p>
+    </div>
+</div>
+<div class="row homeMainContainer">
+    <div id="aboutMeRow" class="row aboutMeRow span8 offset3">          
+        <div class="span3">
+            <img src="~/Content/images/headShot1.jpg"  class="img-circle">
+        </div> 
+        <div class="span3">
+             
+            <h4>About Me</h4>
+                <ul>
+                    <li>Loyola University Chicago Senior
+                        <ul>
+                            <li>Computer Science</li>
+                            <li>Business Information Systems</li>
+                        </ul>
+
+                    </li>
+                    
+                    <li>汉语学生 (Chinese Language Student)</li>
+                    <li>Neckwear Enthusiest</li>
+                    <li>.NET Fanboy</li>
+                   
+                </ul>
+
+        </div>
+    </div>
+    <div id="socialRow" class="row span8 offset3">
+        <div class="row">
+            <div class="span2 blogBox"><button class="btn"></button></div>
+            <div class="span2">
+            <a href="https://github.com/j-hayes"target="_new" class="btn btn-github"><i class="fa fa-github"></i>  GitHub/j-hayes</a>
+           
+            </div>
+            <div class="span2 twitterBox">twitter</div>
+            <div class="span2 resumeBox">resume</div>
+        </div>
+
+    </div>
+    <div id="recentBlogPostRow" class="row span8 offset3">
+       
+        <div class="row">
+            
+            <div class="span4">@Html.DisplayFor(model => model.MostRecentBlogPost.Post)
+        </div>
+        </div>
+
+
+    </div>
+
+</div>    

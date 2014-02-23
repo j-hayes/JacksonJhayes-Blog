@@ -1,0 +1,68 @@
+@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+    <style type="text/css">
+      body {
+          padding-top: 0px;
+        padding-bottom: 40px;
+      }
+
+      /*Jackson added
+          */
+      .homeHeaderRow {
+          height: 500px;
+          background-image: url('Content/images/BlurryDanceYunnan.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 100%; 
+      }
+      .aboutMeRow {
+          background:white;
+          color: #F58C50;
+      }
+      .socialContainer {
+          background-color: #3C8CCE;
+          color: #f2f2f2;
+        
+      }
+      .homeMainContainer {
+          background: white;
+      }
+      .twitterBox {
+   
+
+      }
+    </style>
+    
+    <link href="@Styles.Url("~/Content/css-responsive")" rel="stylesheet" type="text/css" />
+    
+     <link href="~/Content/social-buttons.css" rel="stylesheet" type="text/css" />
+   
+    
+    
+    @RenderSection("head", required: false)
+    @Html.Partial("_html5shiv")
+    @* favicons and touch icons go here *@
+</head>
+<body>
+
+        @RenderBody()
+        <hr>
+        <footer>
+            <p>&copy; Company @System.DateTime.Now.ToString("yyyy")</p>
+        </footer>
+     <!-- container -->
+    @Scripts.Render("~/js")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
