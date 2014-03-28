@@ -6,58 +6,101 @@
 }
 
 
-<div id="headrow" class="row homeHeaderRow">
-    <div class="span8 offset3">
-        <h1>Welcome</h1>
-        <p class="lead">I am Jackson Hayes. This is a website about me. I think your gonna like it. </p>
+<div id="" class="row-fluid">
+    <div class="span12 homeHeaderRow">
+        <div class="span8 offset3">
+            <h1>Welcome</h1>
+            <p class="">
+                I am Jackson Hayes. I am a software developer and business analyst from Champaign, IL living in
+                Chicago, IL. I build apps, make websites. My blog content is sparce, my social media contributions are few and far between.
+                This photo is of me in Yunnan Province, China. I am far more fun in China.
+
+
+            </p>
+        </div>
     </div>
 </div>
-<div class="row homeMainContainer">
-    <div id="aboutMeRow" class="row aboutMeRow span8 offset3">          
-        <div class="span3">
-            <img src="~/Content/images/headShot1.jpg"  class="img-circle">
-        </div> 
-        <div class="span3">
-             
+<div class="row-fluid aboutMeRow homeRow">
+    <div id="" class="row-fluid span8 offset3">
+        <div class="">
+            <img src="~/Content/images/headShot1.jpg" style="max-width: 250px; height:auto;" class="img-circle">
+        </div>
+        <div class="span4">
+
             <h4>About Me</h4>
-                <ul>
-                    <li>Loyola University Chicago Senior
-                        <ul>
-                            <li>Computer Science</li>
-                            <li>Business Information Systems</li>
-                        </ul>
+            <ul>
+                <li>
+                    Loyola University Chicago Senior
+                    <ul>
+                        <li>Computer Science</li>
+                        <li>Business Information Systems</li>
+                    </ul>
+                </li>
+                <li>汉语学生 (Chinese Language Student)</li>
+                <li>Neckwear Enthusiest</li>
+                <li>.NET Fanboy</li>
 
-                    </li>
-                    
-                    <li>汉语学生 (Chinese Language Student)</li>
-                    <li>Neckwear Enthusiest</li>
-                    <li>.NET Fanboy</li>
-                   
-                </ul>
+            </ul>
 
         </div>
+        
     </div>
-    <div id="socialRow" class="row span8 offset3">
-        <div class="row">
-            <div class="span2 blogBox"><button class="btn"></button></div>
-            <div class="span2">
-            <a href="https://github.com/j-hayes"target="_new" class="btn btn-github"><i class="fa fa-github"></i>  GitHub/j-hayes</a>
-           
+   
+</div>
+<div class="row-fluid socialContainer">
+    <div class="row-fluid">
+        <div class="span8 offset3">
+            <div class="span2"><a href="/Views/WGAH" class="btn btn-github socialButton"><i class="fa fa-pencil"></i>  外国 At Home</a></div>
+            <div class="span2"><a href="https://twitter.com/objectivejohn" class="btn btn-github socialButton"><i class="fa fa-twitter"></i>  objectivejohn</a></div>
+            <div class="span2"><a href="https://github.com/j-hayes" class="btn btn-github socialButton"><i class="fa fa-github"></i>  j-hayes</a></div>
+            <div class="span2"><a href="https://linkedin.com/in/jacksonjhayes" class="btn btn-github socialButton"><i class="fa fa-linkedin"></i> jacksonjhayes</a></div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid recentBlogRow homeRow">
+    <div class="row-fluid">
+        <div class="span8 offset3">
+            <div class="row-fluid">
+                <h3>Wai Guo at home's most recent ramblings</h3>
+                <div class="row-fluid">
+                    <div class="span4"><img class="img-rounded" style="height:auto; width:auto; max-width:300px; max-height:300px;" src="~/Content/images/@Model.MostRecentBlogPost.Image" /></div>
+                    <div class="span4">@Html.DisplayFor(model => model.MostRecentBlogPost.Post)</div>
+                </div>
+
+                <div class="span8"><div class="span8">Date Posted: @Html.DisplayFor(model => model.MostRecentBlogPost.Date)</div></div>
             </div>
-            <div class="span2 twitterBox">twitter</div>
-            <div class="span2 resumeBox">resume</div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid span8"><h3>Projects</h3></div>
+<div class="row-fluid flashCardProjectRow homeRow">
+    <div class="row-fluid">
+        <div id="" class="span8 offset3 ">
+            <h3>MVVMCross Chinese Flash Card Applicaiton</h3>
+            <div class="span4">
+
+                <p>
+                    <ul>
+                        <li>I set out with this application to create a free flashcard study application for chinese characters.</li>
+                        <li>The most important feature is that you can create flashcards directly from dictionary entries.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="span4">
+                <img class="img-rounded projectScreenShotW8" src="~/Content/images/FlashCardAppDictionary.png" />
+            </div>
+
+            <div class="span4 offset3">
+                <img class="img-rounded projectScreenShotW8" src="~/Content/images/FlashCardAppStudySet.png" />
+            </div>
+            <div class="row-fluid">
+
+            </div>
+
         </div>
 
     </div>
-    <div id="recentBlogPostRow" class="row span8 offset3">
-       
-        <div class="row">
-            
-            <div class="span4">@Html.DisplayFor(model => model.MostRecentBlogPost.Post)
-        </div>
-        </div>
 
+</div>
 
-    </div>
-
-</div>    

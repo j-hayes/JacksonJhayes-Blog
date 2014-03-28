@@ -1,4 +1,4 @@
-@using System.Web.Optimization
+﻿@using System.Web.Optimization
 @using BootstrapSupport
 @using NavigationRoutes
 <!DOCTYPE html>
@@ -14,37 +14,66 @@
     <style type="text/css">
       body {
           padding-top: 0px;
-        padding-bottom: 40px;
+          padding-bottom: 40px;
+          height: 100%;
       }
-
+        
       /*Jackson added
           */
-      .homeHeaderRow {
-          height: 500px;
-          background-image: url('Content/images/BlurryDanceYunnan.jpg');
-          background-repeat: no-repeat;
-          background-size: 100% 100%; 
-      }
-      .aboutMeRow {
-          background:white;
-          color: #F58C50;
-      }
-      .socialContainer {
-          background-color: #3C8CCE;
-          color: #f2f2f2;
-        
+        .homeHeaderRow {
+            height: 500px;
+            background-image: url('Content/images/BlurryDanceYunnan.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color: white;
+        }
+        .homeRow {
+            height: 100%;
+        }
+        .aboutMeRow {
+            padding-top: 50px;
+            background: #E7AF83;
+            color: white;
+           
+            font-size: 24px; 
+        }
+        .socialContainer {
+            background-color: #E7AF83;
+            color: #f2f2f2;
+            padding-bottom: 10px;
+        }
+      .socialButton {
+          width: 90%;
+          max-width: 250px;
       }
       .homeMainContainer {
           background: white;
+           padding-bottom: 10px;
       }
-      .twitterBox {
-   
 
-      }
+        .recentBlogRow {
+            background-color: #FF4545;
+            color: white;
+          
+            padding-bottom: 10px;
+        }
+        .flashCardProjectRow {
+            background-color: white;
+            color: #4617B4;
+            padding-bottom: 10px;
+        }
+        .projectScreenShotW8 {
+            height:auto; 
+            width:auto;
+            max-width:400px;
+            max-height:400px;
+        }
+      
+     
     </style>
     
-    <link href="@Styles.Url("~/Content/css-responsive")" rel="stylesheet" type="text/css" />
-    
+    <!--<link href="@Styles.Url("~/Content/css-responsive")" rel="stylesheet" type="text/css" />-->
+    <link href="@Styles.Url("~/Content/bootstrap-responsive.css")" rel="stylesheet" type="text/css" />
      <link href="~/Content/social-buttons.css" rel="stylesheet" type="text/css" />
    
     
@@ -54,11 +83,12 @@
     @* favicons and touch icons go here *@
 </head>
 <body>
-
+    <div class="container-fluid">
         @RenderBody()
+    </div>
         <hr>
-        <footer>
-            <p>&copy; Company @System.DateTime.Now.ToString("yyyy")</p>
+        <footer class="offset2">
+            <p>&copy; John Joseph Hayes, Jr. @System.DateTime.Now.ToString("yyyy")</p>
         </footer>
      <!-- container -->
     @Scripts.Render("~/js")
